@@ -7,7 +7,8 @@ import tensorflow as tf
 import random
 from Test_model import read_file_as_image
 import base64
-app = Flask(__name__)
+
+app = Flask(__name__, static_url_path='/static')
 
 fruit_detection_model = tf.keras.models.load_model("D:\DSGP Models\models\Fruits detection model")#256,256
 apple_quality_model = tf.keras.models.load_model("D:\DSGP Models\models\Apple_model2_256")#256,256
@@ -90,7 +91,7 @@ def read_file_as_image(data) -> np.ndarray:
 
 @app.route('/home')
 def home():
-    return render_template("index111.html")
+    return render_template("Detection page.html")
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -101,7 +102,7 @@ def predict():
     fruit_type, fruit_quality = combine_models(fruit_detection_model, fruit_quality_models, img_batch)
 
     if fruit_type == "Unknown":
-        return render_template("index111.html", Error_msg='Please input a valid fruit image (Apple,Banana,Guava,Lime, Orange, Pomegranate)')
+        return render_template("Detection page.html", Error_msg='Please input a valid fruit image (Apple,Banana,Guava,Lime, Orange, Pomegranate)')
 
     if fruit_type in fruit_class_names.keys():
         class_names = fruit_class_names[fruit_type]
@@ -122,9 +123,9 @@ def predict():
         if predicted_class == "Good quality":
             # Draw the contours on the original image
 
-            return render_template("index111.html", Quality_class='This {} is in {}'.format(fruit_type, predicted_class),
-                                   Quality_percentage="{}".format(good_quality_percentage),
-                                   Msg="Yes, you can eat this")
+            return render_template("Detection page.html", Quality_class='This {} is in {}'.format(fruit_type, predicted_class),
+                                   Quality_percentage="{}".format(int(good_quality_percentage)),
+                                   Msg="Yes, you can eat this",img_src="data:image/png;base64,{}".format(base64.b64encode(cv2.imencode('.png', img)[1]).decode()))
 
         elif predicted_class == "Bad quality":
             if 10 <= bad_quality_percentage <= 40:
@@ -132,8 +133,8 @@ def predict():
                 cv2.drawContours(img, contours, -1, (0,0, 255), 2)
                 img = cv2.resize(img, (256, 256))
 
-                return render_template("index111.html", Quality_class='This {} is in {}'.format(fruit_type, predicted_class),
-                                       Quality_percentage="{}".format(bad_quality_percentage),
+                return render_template("Detection page.html", Quality_class='This {} is in {}'.format(fruit_type, predicted_class),
+                                       Quality_percentage="{}".format(int(bad_quality_percentage)),
                                        Msg="Don't eat this, it's rotten!!!",
                                        img_src="data:image/png;base64,{}".format(base64.b64encode(cv2.imencode('.png', img)[1]).decode()))
             else:
@@ -141,11 +142,14 @@ def predict():
                 cv2.drawContours(img, contours, -1, (0, 0, 255), 2)
                 img = cv2.resize(img, (256, 256))
 
-                return render_template("index111.html", Quality_class='This {} is in {}'.format(fruit_type, predicted_class),
-                                       Quality_percentage="{}".format(bad_quality_percentage),
+                return render_template("Detection page.html", Quality_class='This {} is in {}'.format(fruit_type, predicted_class),
+                                       Quality_percentage="{}".format(int(bad_quality_percentage)),
                                        Msg="Think before eating!!!",
                                        img_src="data:image/png;base64,{}".format(base64.b64encode(cv2.imencode('.png', img)[1]).decode()))
 
 
 if __name__ == "__main__":
-    app.run(host='localhost', port=9000)
+    app.run(host='localhost', port=8000)
+
+
+
