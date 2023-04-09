@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRUITORA</title>
+    
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+    <style>*
+      {
+          margin: 0;
+          padding: 0;
+          font-size: 62.5%;
+          overflow: auto;
+          font-family: 'Merienda', cursive;
+              
+      }
+      
+      
+        /* hero banner area start */
+  .hero_banner{
+      background: white;
+      height:74rem;
+  }
+
+  header
+  {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding:2rem;
+      background-color: #86C205;
+  }
+
+  .navi
+  {
+      display:flex;
+      flex-direction: row;
+      margin-right:15rem;
+  }
+
+  .navi a
+  {
+      font-size:2rem;
+      color:white;
+      text-decoration: none;
+      font-weight:900;
+      padding: 0rem 1.5rem;
+  }
+
+  .header_name h3 
+  {
+      font-size:2.5rem;
+      padding: 1rem;
+      color: white;
+      font-weight: 900;
+  }
+  .header_name img
+  {
+      width:100px;
+      height:50px;
+  }
+  .header_name
+  {
+      display: flex;
+  }
+
+  .navi a:hover
+  {
+      
+      color:green;
+  }
+      
+      .navi_icon i
+      {
+          color: white;
+          font-size:2.5rem;
+          width:100px;
+          opacity:0;
+          position:absolute;
+          right:0.2rem;
+          top:3.5rem;
+      
+      }
+      
+      .footer_banner
+      {
+          width:100%;
+          height:20rem;
+          background-color: #86C205;
+          text-align: center;
+          padding:2rem 0rem 0 0;
+          bottom: 0;
+      }
+      .footer_banner h1
+      {
+          color: white;
+          font-size:3rem;
+          padding:0.5rem;
+      }
+      .footer_banner h2
+      {
+          font-size:1.5rem;
+          color: white;
+          padding: 0.2rem;
+      }
+      .footer_banner a 
+      {
+          color:white;
+          font-size:1.2rem;
+          padding:0rem 1rem;
+          text-decoration: none;
+      }
+      .footer_banner ul
+      {
+          display: flex;
+          justify-content: center;
+          padding:1rem;
+      }
+      
+
+      body {
+          font-family: 'Merienda', cursive; 
+          margin: 0;
+          padding: 0;
+          background-color: white;
+        }
+        h1 {
+          font-family:'Merienda', cursive; 
+          margin: 20px 0;
+          text-align: center;
+          color: #000000;
+          font-size: 25px;
+        }
+        form {
+          margin: 20px 0;
+          text-align: center;
+          margin-left: 30%;
+        }
+
+        label[for="FileInput"]{
+          display: block;
+          line-height: 30px;
+          text-align: center;
+          border: 2px solid black;
+          border-radius: 5px;
+          cursor: pointer;
+          height: 9rem;
+          width: 70rem;
+          background-color:#afe53b; 
+        }
+
+        .second_area form #InputText{
+          font-size: 40px;
+        }
+
+        input[type="file"] {
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin-left: 50px;
+          cursor: pointer;
+          border-radius: 5px;
+          font-family:'Merienda', cursive; 
+          width: 10rem;
+          position: absolute;
+          opacity: 0;
+        }
+
+        label[for="FileInput"]::before{
+          content: "";
+          display: block;
+          font-size: 16px;
+          color: #000000;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+
+        input[type="submit"] {
+          background-color: #afe53b;
+          border: 2px solid black;
+          margin-left: 10%;
+          padding: 10px 30px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 10px;
+          margin-left: 5%;
+          cursor: pointer;
+          border-radius: 5px;
+          font-family:'Merienda', cursive; 
+          font-weight: bold;
+        }
+      
+        h4 {
+          margin: 20px 0;
+          text-align: center;
+          color: #ffffff;
+        }
+        .output {
+          background:  #afe53b;
+          border: 2px solid black;
+          border-radius: 5px;
+          margin: 20px auto;
+          max-width: 600px;
+          padding: 20px;
+        }
+        .quality {
+          font-size: 24px;
+          font-weight: bold;
+          color: #000000;
+        }
+        .confidence {
+          font-size: 25px;
+          color: #000000;
+        }
+        .fruit {
+          font-size: 25px;
+          color: #000000;
+        }
+        .QP{
+          font-size: 25px;
+          color: rgb(0, 0, 0);
+
+        }
+        .msg{
+          font-size: 25px;
+          color: black;
+
+        }
+        .Error{
+          font-family:'Merienda', cursive; 
+          font-size: 24px;
+          font-weight: bold;
+          color: #c00902;
+      
+        }
+        .bad {
+          display: block;
+          margin: 20px auto;
+          border: 2px solid  #afe53b;
+          border-radius: 10px;
+          max-width: 600px;
+          }
+          .footer_banner
+          {
+            padding-bottom:3rem;
+            overflow-y: hidden;
+          }
+          .second_area
+          {
+            border: none;
+            margin:5rem 5rem 0rem 5rem;
+            border-radius: 10px;
+            padding:5rem;
+            background-image: url("{{ url_for('static', filename='images/PredictWallpaper1.jpg') }}"), url("{{ url_for('static', filename='images/mylogo.png') }}");
+            background-position: center center, right bottom;
+            background-repeat: no-repeat, no-repeat;
+            background-size: cover, contain;
+}
+      </style>
+  </head>
+  <body>
+  <div class ='hero_banner'>
+    <header>
+      <div class="header_name">
+          <img src="{{ url_for('static', filename='images/mylogo.png')}}"  alt="logo">
+          <a href="index.html" style="text-decoration: none;"><h3>Fruitora</h3></a>
+      </div>
+      <div class="navigation_bar">
+          <ul class="navi">
+              <li><a href="{{ url_for('static', filename='pages/index.html')}}">Home</a></li>
+              <li><a href="{{ url_for('static', filename='pages/aboutus.html')}}">About us</a></li>
+              <li><a href="{{ url_for('static', filename='pages/contactus.html')}}">Contacts us</a></li>
+          </ul>
+      </div>
+      <div class="navi_icon"><i class="fa-solid fa-align-justify"></i></div>
+  
+    </header>
+    <div class="second_area">
+      <h1 >Let's Detect the Quality of your fruit !!</h1>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+      <div class="file-upload"><label for="FileInput" id="InputText">
+        <h1 style="font-size: 30px; padding: 5;"><mark style="background-color:#afe53b;">Choose a file</mark></h1>
+      <input type="file" name="file" id="FileInput"></div>
+      <input type="submit" value="Predict">
+    </form>
+    {% if Quality_class %}
+      <div class="output">
+        <p class="quality">{{ Quality_class }}</p>
+        <p class="QP">Quality percentage : {{ Quality_percentage }}%</p>
+        <p class="msg"> {{ Msg }}</p>
+         {% if img_src %}
+    <img src="{{ img_src }}" alt="Fruit Image" class="bad" style="border: 2px solid black;">
+  {% endif %}
+      </div>
+    {% endif %}
+   
+    {% if  Error_msg %}
+    <div class="output">
+  <p class="Error">{{  Error_msg }}</p>
+</div>
+{% endif %}
+    </div>
+  </div> 
+
+  <div class="footer_banner">
+    <h1>Fruitora</h1>
+    <h2>Copyright © 2023 Fruitora LTD</h2>
+    <ul>
+        <li><a href="#">Privacy Policy |</a></li>
+        <li><a href="#">Security |</a></li>
+        <li><a href="#">FAQ |</a></li>
+        <li><a href="#">Legal stuff</a></li>
+    </ul>
+</div>
+    
+<script src="./index.js"></script>
+  </body>
+</html>
