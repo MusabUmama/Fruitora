@@ -1,0 +1,306 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    font-family: 'Merienda';
+    
+}
+
+/* hero banner area start */
+.hero_banner{
+    background: white;
+    height:74rem;
+}
+
+header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem;
+    background-color: #86C205;
+}
+
+.navi
+{
+    display:flex;
+    flex-direction: row;
+    margin-right:15rem;
+}
+
+.navi a
+{
+    font-size:2rem;
+    color:white;
+    text-decoration: none;
+    font-weight:900;
+    padding: 0rem 1.5rem;
+}
+
+.header_name h3 
+{
+    font-size:2.5rem;
+    padding: 1rem;
+    color: white;
+    font-weight: 900;
+}
+.header_name img
+{
+    width:100px;
+    height:50px;
+}
+.header_name
+{
+    display: flex;
+}
+
+.navi a:hover
+{
+    
+    color:green;
+}
+
+.main_topic
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    padding:10rem 2rem;
+    background-image: url('images/bckgd4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 58.5%;
+}
+.main_topic h3
+{
+    font-size:3rem;
+    color: black;
+    padding: 2rem;
+    padding-top: 10rem;
+    padding-bottom: 1rem;
+    text-align: left;
+}
+.main_topic h2
+{
+    font-size:1.5rem;
+    color: black;
+    padding: 2rem;
+    padding-bottom: 10rem;
+    text-align: left;
+}
+.main_topic button
+{
+    text-align: left;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    font-size:2rem;
+    padding:1rem 4rem;
+    color: white;
+}
+.main_topic button:hover
+{
+    background-color: #86C205;
+    cursor: pointer;
+}
+
+
+.navi_icon i
+{
+    color: white;
+    font-size:2.5rem;
+    width:100px;
+    opacity:0;
+    position:absolute;
+    right:0.2rem;
+    top:3.5rem;
+
+}
+/* hero banner area end */
+
+/* first banner start area */
+.first_banner
+{
+    padding:2rem 0rem;
+    display: grid;
+    grid-template:1fr/ 40% 60%;
+    /* justify-items: center; */
+    /* align-items: center; */
+}
+.first_banner img
+{
+    width: 100%;
+    height:400px;
+    object-fit: contain;
+
+}
+.first_banner .image
+{
+    margin-left:8rem;
+}
+.paragraph_area
+{
+    text-align: center;
+    padding:6rem;
+}
+.paragraph_area h1 
+{
+    font-size:4rem;
+    padding:5rem 1rem 1rem 1rem;
+}
+.paragraph_area h2
+{
+    font-size:2rem;
+    padding:2rem;
+}
+
+/* first banner end area */
+
+
+/* second banner start area */
+.second_banner
+{
+    padding:2rem 0rem;
+    display: grid;
+    grid-template:1fr/ 60% 40%;
+    /* justify-items: center; */
+    /* align-items: center; */
+}
+.second_banner img
+{
+    width: 100%;
+    height:400px;
+    object-fit: contain;
+
+}
+
+/* second banner end area */
+
+/* third banner area start */
+.third_banner
+{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding:2rem 0rem;
+    
+}
+.element
+{
+    border: 5px solid green;
+    border-radius:10%;
+    margin:2rem;
+    width:180px;
+    height:230px;
+}
+.element img
+{
+    width:180px;
+    height:180px;
+    
+}
+.element h1
+{
+    font-size:2rem;
+    text-align: center;
+    margin-top:1rem;
+}
+
+.banner_header h1
+{
+    font-size:2rem;
+    text-align: center;
+    padding: 4rem 0 0 0;
+    margin-top: 1rem;
+}
+/* third banner area end */
+
+/* footer banner start*/
+.footer_banner
+{
+    width:100%;
+    height:20rem;
+    background-color: #86C205;
+    text-align: center;
+    padding:2rem 0rem 0 0;
+}
+.footer_banner h1
+{
+    color: white;
+    font-size:4rem;
+    padding:1rem;
+}
+.footer_banner h2
+{
+    font-size:2rem;
+    color: white;
+    padding: 1rem;
+}
+.footer_banner a 
+{
+    color:white;
+    font-size:1.8rem;
+    padding:0rem 1rem;
+    text-decoration: none;
+}
+.footer_banner ul
+{
+    display: flex;
+    justify-content: center;
+    padding:1rem;
+}
+/* 
+.footer_banner .fa
+{
+    padding: 20px;
+    font-size:30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius:50%;
+
+}
+  
+.fa:hover 
+{
+      opacity: 0.7;
+}
+
+.fa-facebook 
+{
+    background: #3B5998;
+    color: white;
+}
+  
+.fa-twitter 
+{
+    background: #55ACEE;
+    color: white;
+}
+  
+.fa-google 
+{
+    background: #dd4b39;
+    color: white;
+}
+  
+.fa-linkedin 
+{
+    background: #007bb5;
+    color: white;
+}
+  
+.fa-youtube 
+{
+    background: #bb0000;
+    color: white;
+} */
+/* footer banner end*/
+

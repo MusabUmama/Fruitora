@@ -1,0 +1,84 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    font-family: 'Merienda';
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;		
+}
+
+.box {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    height: 600px;
+    width: 80%;
+    max-width: 900px;
+}
+.name{
+    font-size: 40px;
+}
+
+.image {
+    margin-right: 50px;
+    flex-basis: 30%;
+    height: 55%;
+    width: 50%;
+    overflow: hidden;
+    border-style: groove;
+    border-radius: 2%;
+    border-color:black;
+}
+.info {
+    flex-basis: 65%;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    overflow-x: hidden;
+    font-family: 'Merienda';
+}
+
+.box button
+{   
+    right:0;
+    bottom:0;
+    text-align: center;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    font-size:2rem;
+    padding:1rem 4rem;
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    
+}
+
+.fa-envelope {
+    color: white;
+    margin-top: 5%;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+    margin-top: 5%;
+}
+
+.fa-github {
+    color: black;
+    margin-top: 5%;
+}
